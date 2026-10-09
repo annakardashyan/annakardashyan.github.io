@@ -9,7 +9,7 @@
   --gold-wash: #f8f4e9;
   --muted: #d1cec6;
   --rule: #e7e2d7;
-  --serif: Georgia, 'Times New Roman', serif;
+  --serif: 'Iowan Old Style', Baskerville, 'Palatino Linotype', Palatino, Georgia, serif;
   --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
@@ -51,7 +51,8 @@ h1, h2 { margin: 0; font-family: var(--serif); font-weight: 400; letter-spacing:
 h1 { max-width: 650px; color: var(--paper); font-size: clamp(72px, 9.2vw, 114px); line-height: .86; }
 h1 em { color: var(--gold-light); font-weight: 400; }
 .about-lede { max-width: 670px; margin: 32px 0 20px; color: #f2eee6; font: 23px/1.5 var(--serif); }
-.about-text { max-width: 640px; margin: 0; padding-left: 15px; border-left: 1px solid #d8bc7873; color: #d7d3cb; font-size: 14px; line-height: 1.8; }
+.about-text { max-width: 640px; margin: 0; padding-left: 15px; border-left: 1px solid #d8bc7873; color: #d7d3cb; font: 16px/1.85 var(--serif); letter-spacing: .005em; }
+.about-text em { color: #f0ddb0; font-style: italic; }
 .about-text + .about-text { margin-top: 12px; }
 .about-side { min-height: 470px; position: relative; display: flex; align-items: end; justify-content: center; }
 .orbit-art { position: absolute; width: 360px; height: 360px; top: 0; left: 50%; transform: translateX(-50%); border: 1px solid #d8bc787a; border-radius: 50%; }
@@ -90,6 +91,9 @@ h1 em { color: var(--gold-light); font-weight: 400; }
 .project-list li:nth-child(even) { background: linear-gradient(140deg, #f7f1e3 0%, #f7f1e3 78%, #ecddb9 100%); }
 .project-list li::before { content: '0' counter(project); position: absolute; left: 22px; top: 26px; width: 29px; height: 29px; display: grid; place-items: center; border-radius: 50%; background: var(--gold-light); color: var(--ink); font: 10px var(--sans); }
 .project-list li:hover { transform: translateY(-3px); box-shadow: 0 12px 28px #17171512; }
+.partner-note { display: grid; grid-template-columns: 145px minmax(0, 1fr); align-items: start; gap: 28px; margin-top: 30px; padding: 24px 28px; border-left: 3px solid var(--gold); background: var(--gold-wash); }
+.partner-label { margin: 3px 0 0; color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: .14em; line-height: 1.6; text-transform: uppercase; }
+.partner-note > p:last-child { max-width: 760px; margin: 0; color: #302e29; font: 18px/1.65 var(--serif); }
 
 .site-footer { min-height: 104px; padding: 24px max(7%, calc((100vw - 1160px) / 2)); display: flex; align-items: center; justify-content: space-between; gap: 20px; background: var(--ink); color: var(--paper); }
 .site-footer .brand { color: var(--paper); }
@@ -111,7 +115,7 @@ h1 em { color: var(--gold-light); font-weight: 400; }
   .about-layout { width: 88%; min-height: 0; padding: 61px 0 70px; grid-template-columns: 1fr; gap: 35px; }
   h1 { font-size: clamp(66px, 17vw, 90px); }
   .about-lede { margin-top: 25px; font-size: 21px; }
-  .about-text { font-size: 13px; }
+  .about-text { font-size: 15px; }
   .about-side { min-height: 370px; justify-content: flex-start; }
   .orbit-art { width: 290px; height: 290px; left: auto; right: -25px; transform: none; }
   .research-card { max-width: 520px; align-self: end; margin-top: 130px; }
@@ -124,6 +128,8 @@ h1 em { color: var(--gold-light); font-weight: 400; }
   .project-list { grid-template-columns: 1fr; gap: 11px; }
   .project-list li { min-height: 0; padding: 24px 20px 24px 61px; font-size: 17px; }
   .project-list li::before { left: 17px; top: 21px; }
+  .partner-note { grid-template-columns: 1fr; gap: 8px; margin-top: 22px; padding: 20px; }
+  .partner-note > p:last-child { font-size: 17px; }
   .site-footer { padding: 22px 6%; flex-wrap: wrap; }
   .site-footer p { flex: 1 1 74%; line-height: 1.65; }
 }
